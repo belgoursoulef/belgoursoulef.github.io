@@ -1,0 +1,123 @@
+/* Accordion Styles for Competence Details */
+.competence-detail-section {
+    padding: 6rem 0;
+    min-height: 80vh;
+    background-color: var(--light-bg);
+}
+
+.ac-group {
+    margin-bottom: 3rem;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.ac-group h2 {
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.8rem;
+}
+
+.accordion {
+    background-color: var(--gray-100);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 1.2rem 1.5rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion:hover {
+    background-color: var(--gray-200);
+}
+
+.accordion.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.accordion::after {
+    content: '\f067'; /* FontAwesome plus */
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free';
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.accordion.active::after {
+    content: '\f068'; /* FontAwesome minus */
+    transform: rotate(180deg);
+}
+
+.panel {
+    padding: 0 1.5rem;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    border: 1px solid var(--gray-200);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.panel.open {
+    padding: 1.5rem;
+}
+
+.panel-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.panel-content strong {
+    color: var(--primary-dark);
+}
+
+.placeholder-img {
+    background: var(--light-bg);
+    border: 2px dashed var(--gray-300);
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    color: var(--gray-700);
+    margin-top: 1.5rem;
+    transition: var(--transition);
+}
+
+.placeholder-img:hover {
+    border-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.placeholder-img i {
+    font-size: 2.5rem;
+    color: var(--gray-300);
+    margin-bottom: 1rem;
+    display: block;
+    transition: var(--transition);
+}
+
+.placeholder-img:hover i {
+    color: var(--primary-light);
+}

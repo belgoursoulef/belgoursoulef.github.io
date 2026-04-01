@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Belgour Soulef's Projects" />
+    <title>My Projects - Belgour Soulef</title>
+    <link rel="icon" type="image/png" href="assets/website.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="alternate" hreflang="fr" href="projects-fr.html" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">WELCOME</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#cv" class="nav-link">CV</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="projets-fr.html" class="lang-switcher">FR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h1 class="section-title">My Projects</h1>
+            <p class="section-subtitle">Projects completed as part of the B.U.T. Networks &amp; Telecommunications programme</p>
+
+            <!-- Filter buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn filter-admin" data-filter="Administrer">
+                    <i class="fas fa-server"></i> Administer
+                </button>
+                <button class="filter-btn filter-connect" data-filter="Connecter">
+                    <i class="fas fa-network-wired"></i> Connect
+                </button>
+                <button class="filter-btn filter-program" data-filter="Programmer">
+                    <i class="fas fa-code"></i> Program
+                </button>
+                <button class="filter-btn filter-secure" data-filter="Sécuriser">
+                    <i class="fas fa-shield-alt"></i> Secure
+                </button>
+                <button class="filter-btn filter-monitor" data-filter="Surveiller">
+                    <i class="fas fa-chart-line"></i> Monitor
+                </button>
+            </div>
+
+            <!-- Administer anchor -->
+            <div id="administrer" class="comp-section-anchor">
+                <div class="comp-section-label label-admin">
+                    <i class="fas fa-server"></i> Administer
+                </div>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project: Administer -->
+                <div class="project-card" data-category="Administrer">
+                    <div class="project-image project-img-admin">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.prod.website-files.com%2F64945c3b6498f55f8967ddbd%2F66cc4fa3236d6014094cfd10_cyber-security-awareness.webp&f=1&nofb=1&ipt=c5180cbb8e5336f5b5796334d12764bb4722c863ab4204f947542df8b91c9219" alt="Online safety awareness">
+                        <div class="project-category-badge badge-admin">Administer</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Online Safety Awareness (SAE 1.01)</h3>
+                        <p class="project-date"><i class="far fa-calendar-alt"></i> September 2025</p>
+                        <p class="project-desc">Educating users and staff about web dangers: phishing, malware and unsafe browsing habits, to ensure a secure and responsible digital environment.</p>
+                        <div class="project-tags">
+                            <span>MOOC ANSSI</span>
+                            <span>Cybersecurity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://moodle.univ-artois.fr/pluginfile.php/62457/mod_resource/content/2/ProjetSAE11_bethune.pdf" class="btn btn-outline" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connecter anchor -->
+                <div id="connecter" class="comp-section-anchor" style="grid-column: 1 / -1;">
+                    <div class="comp-section-label label-connect">
+                        <i class="fas fa-network-wired"></i> Connect
+                    </div>
+                </div>
+
+                <!-- Project: Connect -->
+                <div class="project-card" data-category="Connecter">
+                    <div class="project-image project-img-connect">
+                        <img src="https://www.diario-as.es/wp-content/uploads/2024/06/FSB_HUBs.jpg" alt="Transmission systems">
+                        <div class="project-category-badge badge-connect">Connect</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Transmission Systems Analysis (SAE 1.03)</h3>
+                        <p class="project-date"><i class="far fa-calendar-alt"></i> September 2025</p>
+                        <p class="project-desc">Characterise a physical link (copper, fibre optic or wireless), take measurements and present findings to a client or colleague.</p>
+                        <div class="project-tags">
+                            <span>LTspice</span>
+                            <span>Matlab / Simulink</span>
+                            <span>Fibre optics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://moodle.univ-artois.fr/pluginfile.php/200073/mod_resource/content/1/SAE103_pr%C3%A9sentation.pdf" class="btn btn-outline" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program anchor -->
+                <div id="programmer" class="comp-section-anchor" style="grid-column: 1 / -1;">
+                    <div class="comp-section-label label-program">
+                        <i class="fas fa-code"></i> Program
+                    </div>
+                </div>
+
+                <!-- Project: Program -->
+                <div class="project-card" data-category="Programmer">
+                    <div class="project-image project-img-program">
+                        <img src="https://www.fau.edu/newsdesk/images/news/american-sign-languauge-newsdesk.jpg" alt="AI Model">
+                        <div class="project-category-badge badge-program">Program</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Model – Sign Language Recognition (SAE 1.05)</h3>
+                        <p class="project-date"><i class="far fa-calendar-alt"></i> January 2026</p>
+                        <p class="project-desc">A real-time American Sign Language (ASL) recognition system built using computer vision and machine learning techniques.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>AI / ML</span>
+                            <span>OpenCV</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/belgoursoulef/ASL-AI-detection" class="btn btn-outline" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secure anchor -->
+                <div id="securiser" class="comp-section-anchor" style="grid-column: 1 / -1;">
+                    <div class="comp-section-label label-secure">
+                        <i class="fas fa-shield-alt"></i> Secure
+                    </div>
+                </div>
+
+                <!-- Project: Secure -->
+                <div class="project-card" data-category="Sécuriser">
+                    <div class="project-image project-img-secure">
+                        <img src="https://greymatter.com/wp-content/uploads/2024/06/Cyber-security-news-header.png" alt="IT security">
+                        <div class="project-category-badge badge-secure">Secure</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Secure Administration (SAE 3.01)</h3>
+                        <p class="project-date"><i class="far fa-calendar-alt"></i> Semester 3</p>
+                        <p class="project-desc">Upcoming project – Implementing security policies, configuring firewalls and protecting administrator access.</p>
+                        <div class="project-tags">
+                            <span>Firewall</span>
+                            <span>VPN</span>
+                            <span>Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monitor anchor -->
+                <div id="surveiller" class="comp-section-anchor" style="grid-column: 1 / -1;">
+                    <div class="comp-section-label label-monitor">
+                        <i class="fas fa-chart-line"></i> Monitor
+                    </div>
+                </div>
+
+                <!-- Project: Monitor -->
+                <div class="project-card" data-category="Surveiller">
+                    <div class="project-image project-img-monitor">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpurex.ps%2Fimg%2FCybersecurityMonitoringServices.jpg&f=1&nofb=1&ipt=c6dd7dd9796418513610fdc01025aee7818ef4c224e91e5a8dca5222a4f01612" alt="Network monitoring">
+                        <div class="project-category-badge badge-monitor">Monitor</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Monitor and Analyse Performance (SAE 2.03)</h3>
+                        <p class="project-date"><i class="far fa-calendar-alt"></i> Semester 3</p>
+                        <p class="project-desc">Upcoming project – Network performance monitoring, collecting and analysing metrics using monitoring tools.</p>
+                        <div class="project-tags">
+                            <span>SNMP</span>
+                            <span>Monitoring</span>
+                            <span>Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
