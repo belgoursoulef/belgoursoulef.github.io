@@ -12303,3 +12303,82 @@ header.masthead h1, header.masthead .h1 {
 
 #comp-surveiller .comp-ac-list li { border-left-color: #9b59b633; }
 #comp-surveiller .comp-ac-list li:hover { border-left-color: #9b59b6; }
+
+/* Notice for future competences */
+.ac-notice-future {
+    background-color: rgba(243, 156, 18, 0.1);
+    border-left: 3px solid #f39c12;
+    color: #d35400;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Clickable Section Title with glowing / dashed line */
+.section-title.clickable-title {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title.clickable-title::after {
+    background: transparent !important;
+    border-bottom: 3px dashed #3498db !important;
+    border-radius: 0;
+    width: 100% !important;
+    height: 3px;
+    left: 0 !important;
+    transform: none !important;
+    transition: all 0.3s ease;
+}
+
+.section-title.clickable-title:hover {
+    color: #3498db !important;
+    text-shadow: 0 0 15px rgba(52, 152, 219, 0.6) !important;
+}
+
+.section-title.clickable-title:hover::after {
+    width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+    background: transparent !important;
+    border-bottom: 3px solid #3498db !important;
+    box-shadow: 0 3px 10px rgba(52, 152, 219, 0.8) !important;
+}
+
+/* Hidden/Visible state for floating CPN explanation container */
+.intro-container {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(52, 152, 219, 0.05);
+    transform: translateY(15px);
+}
+
+.intro-container.visible {
+    max-height: 2000px;
+    opacity: 1;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 3.5rem !important;
+    transform: translateY(0);
+}

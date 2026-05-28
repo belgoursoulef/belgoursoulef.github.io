@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,6 +15,7 @@
     <link href="css/accordion.css" rel="stylesheet" />
     <link rel="alternate" hreflang="fr" href="competences-fr.html" />
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar scrolled">
@@ -32,62 +34,274 @@
     <!-- Details Section -->
     <section class="competence-detail-section" style="margin-top: 60px;">
         <div class="container">
-            <h1 class="section-title">Critical Learning Details</h1>
-            <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem;">
-                Discover how each competence was put into practice in my projects.
-            </p>
+            <h1 class="section-title clickable-title" id="toggle-intro" title="Click to show explanation">Critical Learning Details</h1>
+            <div class="intro-container" id="cpn-intro" style="max-width: 900px; margin: 0 auto; text-align: center; background: #fff; padding-left: 2rem; padding-right: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <p class="intro-text" style="font-size: 1.1rem; line-height: 1.7; color: var(--gray-700); margin-bottom: 2rem; text-align: justify;">
+                    A Critical Learning outcome is developed at the national level by the National Pedagogical Commission (CPN); it is an absolutely essential know-how that we, as students, must master to validate a stage of our B.U.T., but also that companies expect from us to prove that we have the level required by the diploma:
+                </p>
+                <div class="intro-image-wrap" style="margin: 2rem auto; max-width: 500px; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <img src="assets/img/competence_levels.png" alt="Levels of competence development" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+                <p class="image-caption" style="font-size: 1rem; font-weight: 500; color: var(--primary-dark); margin-top: 1rem; margin-bottom: 0;">
+                    Les niveaux de développement des compétences
+                </p>
+            </div>
 
             <!-- AC11 : Administer -->
             <div class="ac-group" id="ac11">
                 <h2><i class="fas fa-server" style="color: #e74c3c;"></i> Competence 1 : Administer</h2>
-                
-                <button class="accordion">AC11.01 – Master the core concepts of operating systems (Linux, Windows)</button>
+
+                <button class="accordion">AC11.01 – Master the fundamental laws of electricity to intervene on network
+                    and telecommunications equipment</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Maintenance and configuration of Linux servers during the first year.</p>
-                        <div class="placeholder-img">
-                            <i class="fas fa-image"></i>
-                            <p>Space for Linux console screenshot or VM configuration.</p>
+                        
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/TP1_version2.pdf" target="_blank"
+                                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Document TP R1.05
+                            </a>
+                        </div>
+
+                        <div class="ac-image-wrap" style="max-width: 400px; margin: 1.5rem auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff;">
+                            <img src="assets/img/ac1101_circuit.png" alt="Electrical circuit diagram (Kirchhoff's & Ohm's laws)" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                            <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">As part of the R101 resource lab work, I studied
+                                        Ohm's and Kirchhoff's laws. I handled a multimeter to practically measure
+                                        voltages and currents on simple electrical circuits.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">My goal was to learn how to diagnose hardware
+                                        failures on network equipment and to accurately understand their power supply
+                                        needs.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools,
+                                        resources):</strong> <br><span style="color: var(--gray-700);">I relied on my
+                                        theoretical electricity classes to carry out the practical manipulations. I used
+                                        a breadboard and a multimeter to test and validate the various circuits in the
+                                        laboratory.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Since the lab sessions are done in groups, the
+                                        lack of time to practice alone was my main difficulty. To make sure I mastered
+                                        the subject and was ready before the practical exam (CTP), I had to stay extra
+                                        hours to redo the circuits and measurements by myself.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">Thanks to this, I understood how to calculate
+                                        the actual power consumption of a PoE switch or router. It also helped me
+                                        realize how important electrical protection systems are within network
+                                        racks.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">Next time, I will prioritize a modeling and
+                                        conceptual tracing phase before manipulating. Taking the time to graphically map
+                                        the circuit architecture is a key step to streamline my measurements and secure
+                                        my interventions on the equipment.</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC11.02 – Deploy and configure basic network services (DHCP, DNS, HTTP)</button>
+                <button class="accordion">AC11.02 – Understand the architecture and foundations of digital systems, the
+                    principles of information coding, communications and the Internet</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Practical tasks (TP) and SAE of the first year.</p>
-                        <div class="placeholder-img">
-                            <i class="fas fa-network-wired"></i>
-                            <p>Space for network diagrams or configuration files.</p>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/S%C3%A9ance_TP5-SAE13.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Course R1.02: OSI Model and Internet Protocols
+                            </a>
+                        </div>
+                        
+                        <div class="ac-image-wrap" style="max-width: 750px; margin: 1.5rem auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee;">
+                            <img src="assets/img/network_topology.png" alt="Network topology diagram" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                            <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I studied the OSI and TCP/IP models in detail through the analysis of essential protocols: ARP, ICMP, DNS, DHCP and TCP/UDP. I looked into IPv4/IPv6 addressing, coding, and I dissected the mechanisms of data encapsulation directly in Ethernet frames using packet captures and the analysis of addressing plans.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">It was essential for me to understand exactly how information flows in a network. Mastering these Internet foundations is a mandatory basis before being able to configure, design or administer an infrastructure: without it, effective troubleshooting is simply impossible.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools,
+                                        resources):</strong> <br><span style="color: var(--gray-700);">I relied on the theoretical courses of the R102 resource, RFC documentation and addressing practicals (TD). For practice, I first used Cisco Packet Tracer then real equipment in the laboratory to capture traffic (HTTP, DNS, ICMP) with Wireshark, while crossing these notions with my preparation for the CCNA modules.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">At first, I was completely overwhelmed by the massive amount of information and the impressive number of different protocols to integrate at the same time. Faced with this overload of new theoretical concepts, I often felt like everyone else was moving faster and knew more than me, which made learning quite stressful.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I acquired a global, end-to-end understanding of a packet's journey from the application layer to the physical layer. Opening and reading a Wireshark capture now allows me to visualize what is actually happening on the cable and quickly identify the root cause of a network malfunction.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">In the future, I would avoid rushing to try to remember everything at once. I would prefer to start with small steps, go step by step by breaking down the information, and take the time to properly consolidate each notion before moving on to the next one to better assimilate things in the long run.</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC11.03 – Use virtualisation tools to manage server environments</button>
+                <button class="accordion">AC11.03 – Configure the basic functions of the local network</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Use of VirtualBox / VMware to create secure network mock-ups.</p>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/write%20up%20wireshark.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View TP R1.03: Basic Cisco Packet Tracer Configuration
+                            </a>
+                        </div>
+                        
+                        <div class="ac-images-container" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin: 1.5rem 0; align-items: stretch;">
+                            <div class="ac-image-wrap" style="flex: 1 1 280px; max-width: 320px; height: 180px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                <img src="assets/img/ac1103_cabling.jpg" alt="Patch panel cabling configuration" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div class="ac-image-wrap" style="flex: 1 1 280px; max-width: 320px; height: 180px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #2b2b2b; display: flex; align-items: center; justify-content: center;">
+                                <img src="assets/img/ac1103_cli.png" alt="Cisco Switch CLI Configuration" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;">
+                            </div>
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I configured Cisco switches and routers directly via the Command Line Interface (CLI). My interventions included assigning IP addresses, creating VLANs, setting up static routing, and configuring the DHCP protocol.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">This is truly the core skill of a network technician. Without knowing how to properly configure a local network at the base, it is simply impossible to ensure its availability and proper functioning for users.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">As part of SAE 1.03 (Transmission Device), I started with simulations on Packet Tracer to validate my topologies, then I moved on to physical equipment during practicals. I relied heavily on official Cisco documentation and R103 course materials.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Inter-VLAN routing and understanding how virtual interfaces (SVI) work caused me quite a few problems at the beginning. The logic was not obvious and I had to erase and restart my configurations several times before the ping went through.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">Today, I master the basic commands of the Cisco IOS system, and the logic of network segmentation via VLAN has become very clear and natural to me.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">Next time, I will take the time to document each step of my configuration in a logbook, with screenshots, so that I can replay the manipulations much more easily without having to memorize everything.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC11.04 – Identify and troubleshoot common system or network faults</button>
+                <button class="accordion">AC11.04 – Master the roles and fundamental principles of operating systems to
+                    interact with them for the configuration and administration of networks and provided
+                    services</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Diagnostics and connectivity tests (ping, traceroute).</p>
+                        
+                        <div class="document-links" style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
+                            <a href="assets/Guide%20d%E2%80%99administration%20Linux.pdf" target="_blank"
+                                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Linux Administration Guide
+                            </a>
+                            <a href="assets/Rapport%20administration%20windows10.pdf" target="_blank"
+                                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Windows 10 Administration Report
+                            </a>
+                        </div>
+
+                        <div class="ac-images-container" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin: 1.5rem 0; align-items: stretch;">
+                            <div class="ac-image-wrap" style="flex: 1 1 450px; max-width: 550px; height: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                <img src="assets/img/ac1104_services.png" alt="Windows Admin Center Services Manager" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;">
+                            </div>
+                            <div class="ac-image-wrap" style="flex: 1 1 450px; max-width: 550px; height: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                <img src="assets/img/ac1104_docker.png" alt="Docker Desktop Dashboard" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;">
+                            </div>
+                        </div>
+                        
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I used command-line Linux environments (Ubuntu) to perform system administration tasks: file tree management, user rights assignment, network interface configuration (via `ifconfig` and `ip`), and service management with `systemd`.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">The vast majority of network servers worldwide run on Linux. Mastering the terminal is not an option; it is an essential prerequisite for administering and deploying enterprise network services.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">I worked on these skills during the Semester 1 Systems practicals, installing and configuring an Ubuntu server. I supplemented this learning with online tutorials and extensive personal practice on virtual machines via VirtualBox.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Managing permissions with the `chmod` and `chown` commands, as well as understanding how background processes (daemons) work, were the most difficult points to grasp initially.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I now feel comfortable in a Linux terminal performing basic administration tasks and I precisely understand the role of the main network services within the operating system.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">If I had to do it again, I would install a Linux server at home (or on an old PC) from the very first day of training to force myself to practice daily, and not just during practical hours.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC11.05 – Manage access rights and system security</button>
+                <button class="accordion">AC11.05 – Identify dysfunctions in the local network and know how to report
+                    them</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> User management in Linux (chmod, chown).</p>
+                        
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/write%20up%20wireshark.pdf" target="_blank"
+                                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Wireshark Write-up
+                            </a>
+                        </div>
+
+                        <div class="ac-image-wrap" style="max-width: 750px; margin: 1.5rem auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff;">
+                            <img src="assets/img/ac1105_wireshark.png" alt="Wireshark Packet Capture NAT Diagnostic" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </div>
+                        
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I practiced network diagnostics using standard troubleshooting utilities (`ping`, `traceroute`, `nslookup`) as well as Wireshark to accurately locate simulated laboratory failures (faulty cables, IP errors, switching loops).</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">Knowing how to identify the source of a problem and report it correctly is essential. This allows for the rapid restoration of service availability and effective collaboration with the rest of the technical team.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">During the diagnostic practicals (R103), I was faced with various failure scenarios. I had to apply a strict investigation methodology based on the OSI model layers, then write detailed incident reports.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">At first, without a truly rigorous method, I had a hard time quickly distinguishing a Layer 2 failure (switch or MAC problem) from a Layer 3 failure (routing or IP problem). I tested a bit randomly.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I ended up integrating a systematic diagnostic method: I first check the physical layer, then the data link, network, and finally the transport layer. This rigor considerably accelerates my resolution time.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">I would set up a mock ticketing system among students to practice formal and professional incident writing right from the start of the year.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC11.06 – Document and automate administration tasks</button>
+                <button class="accordion">AC11.06 – Install a client workstation, explain the implemented
+                    procedure</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Creation of Bash / Python backup scripts.</p>
+                        
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/Compte_Rendu_PXE_Belgour.pdf" target="_blank"
+                                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View PXE Server Deployment Report
+                            </a>
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I carried out the complete installation and configuration of Windows and Linux workstations: managing disk partitioning, OS installation, network configuration, and deployment of business software and drivers.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">Preparing and installing client workstations is part of a technician's basic daily routine. Knowing not only how to do it but also being able to explain and document the procedure is essential for knowledge transfer within a team.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">I gained this experience mainly during my corporate internships (Surface Informatique and DNL Informatique), where I prepared many machines under real conditions, as well as during IUT practicals.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">The hardest part wasn't the technical installation itself, but the effort to clearly document each step. Writing a procedure precise enough for another technician to reproduce without outside help required a lot of rigor.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I truly realized the paramount importance of technical documentation: a well-written procedure on the spot saves precious time during future interventions.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">In the future, I will make it a habit to systematically take screenshots at every click or important step, right from the very beginning of the installation, to facilitate writing my guides.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,43 +309,169 @@
             <!-- AC12 : Connect -->
             <div class="ac-group" id="ac12">
                 <h2><i class="fas fa-network-wired" style="color: #2980b9;"></i> Competence 2 : Connect</h2>
-                
-                <button class="accordion">AC12.01 – Understand the OSI and TCP/IP models and their role in communications</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Analysis of Transmission Systems (SAE 1.03).</p>
-                    </div>
-                </div>
 
-                <button class="accordion">AC12.02 – Configure active network equipment (Cisco routers and switches)</button>
+                <button class="accordion">AC12.01 – Measure, analyze and comment on signals</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Use of Packet Tracer and physical equipment.</p>
-                        <div class="placeholder-img">
-                            <i class="fas fa-project-diagram"></i>
-                            <p>Space for Packet Tracer topology or Cisco CLI.</p>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/TP1_version2.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Lab Sheet: RJ45 Cabling and Reflectometry Testing
+                            </a>
+                        </div>
+                        <div class="ac-image-wrap" style="max-width: 750px; margin: 1.5rem auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff;">
+                            <img src="assets/img/ac1201_cabling.jpg" alt="Rigol DSA 815 Spectrum Analyzer" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I made RJ45 Ethernet cables respecting the T568A and T568B standards. I then verified my work using a cable tester, while studying the physical characteristics and performance of cable categories (Cat5e, Cat6).</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">Structured cabling is the physical foundation of any network. If this base is poor, a poorly crimped cable can cause intermittent failures and packet loss that are very difficult to diagnose at the software level later.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">I put this into practice during the Semester 1 cabling practicals, as well as part of SAE 1.03. I handled crimping tools, pair testers, and relied on structured cabling guides.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Perfectly aligning the small copper wires in the correct order inside the RJ45 connector, without them moving during crimping, took quite a few attempts before I had a fluid motion.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I now know how to cleanly make straight-through and crossover cables. I also concretely understood why the choice of cable category has a direct impact on bandwidth and maximum transmission distance.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">I would practice on extra cable scraps before assessments to gain execution speed and precision during crimping.</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC12.03 – Analyse and characterise transmission media (copper, fibre, wireless)</button>
+                <button class="accordion">AC12.02 – Characterize elementary transmission systems and discover the mathematical modeling of their operation</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Analysis of Transmission Systems (SAE 1.03), testing twisted pairs and fibre optic.</p>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/write%20up%20wireshark.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Report R1.12: Spectrum Analysis and WiFi Propagation
+                            </a>
+                        </div>
+                        
+                        <div class="ac-image-wrap" style="max-width: 750px; margin: 1.5rem auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff;">
+                            <img src="assets/img/ac1202_filter.png" alt="Filter circuit simulation and Bode plot" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I studied the different WiFi standards (802.11 a/b/g/n/ac) and configured access points (APs) in infrastructure mode. I also analyzed WiFi signals and channels using scanning software.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">Wireless is ubiquitous in businesses today. Understanding its broadcasting and interference mechanisms is mandatory to be able to deploy and secure reliable and high-performing WiFi networks.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">During the R112 course and associated practicals, I configured a Cisco Access Point. I used the inSSIDer tool to perform a WiFi spectrum analysis on the 2.4 GHz and 5 GHz bands to optimize the channel plan.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Interference management and the logic of selecting non-overlapping channels (like channels 1, 6, and 11 in 2.4 GHz) were not very intuitive initially and required conceptualization effort.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I now understand the technical compromises that must be made between signal range, expected throughput, and security, depending on the chosen WiFi standard and the physical deployment environment.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">To make this learning even more concrete, I would create a thermal map of radio coverage (heatmap) right in the hallways of the IUT building.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC12.04 – Set up a local network with IP addressing and subnetting</button>
+                <button class="accordion">AC12.03 – Deploy transmission media</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> VLSM subnet calculations during practical sessions.</p>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/Compte_Rendu_PXE_Belgour.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View SAE 1.3 Deliverable: Deployment of an Enterprise Network
+                            </a>
+                        </div>
+                        
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I designed and deployed complete network topologies from scratch. This included creating the IP addressing plan, physical cabling, software configuration of active equipment, and final connectivity testing.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">Setting up an end-to-end network is the culmination that brings together all the skills of the specialty. It is the real and concrete application of all theoretical learning seen in class.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">I worked on these deployments in pairs during practicals and for SAE 1.03. We used Packet Tracer for the mock-up and design phase before transposing everything onto real hardware in the server racks.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Managing and calculating the addressing plan required several iterations. It was necessary to ensure a logical and scalable organization while avoiding IP address conflicts between the different machines.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">Above all, I learned that planning must precede action. A good addressing plan, thought out and well-documented on paper, prevents the vast majority of problems during the configuration phase.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">I would force myself to write a complete design document (with a clean architecture diagram and a finalized addressing table) even before turning on or touching any equipment.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC12.05 – Measure and interpret the performance of a physical link</button>
+                <button class="accordion">AC12.04 – Connect ToIP systems</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> SAE 1.03 : Measurements with oscilloscopes and spectrum analysers.</p>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/Configuration%20Asterisk.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Configuration Asterisk Document
+                            </a>
+                        </div>
+                        
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I configured an IP telephony (ToIP) server using Asterisk, creating SIP extensions (users) and defining dial plans (dialplan).</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">IP telephony is essential in companies to centralize and manage voice communications economically and scalably.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">I installed Asterisk on a Linux server. I configured the sip.conf and extensions.conf files, then I used softphones (MicroSIP) to test and validate call establishment.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">The syntax configuration of Asterisk files, especially the dialplan logic (extensions.conf) with priorities and contexts, was difficult to understand at first.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I understood how signaling (SIP) and media stream transport (RTP) protocols work, as well as the importance of codec management for voice quality.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">I would test configurations more systematically with capture tools like Wireshark to analyze SIP packet exchanges in case of issues.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="accordion">AC12.05 – Communicate with a third party (client, collaborator...) and adapt discourse and language to the interlocutor</button>
+                <div class="panel">
+                    <div class="panel-content">
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/Livrable-sae12.ipynb" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s;">
+                                <i class="fas fa-file-code"></i>
+                                View SAE 1.2 Deliverable
+                            </a>
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I provided direct technical assistance to users. I had to explain the nature of failures and the interventions I was performing, and I also wrote professional intervention reports.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">A good network technician is not just an expert configuring machines in isolation. Knowing how to demystify and communicate clearly with non-technical people is an indispensable human skill (soft-skill) in business.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">I was able to put this into practice during my professional internships (at Surface Informatique and DNL Informatique), where I had to learn on the job how to rephrase complex IT problems into accessible language.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">The hardest part was learning to gauge my interlocutor to adapt my language level. It was necessary to simplify for novices without sounding condescending, while remaining precise with more technical colleagues.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I realized that communication matters almost as much as technique: a user who feels heard, reassured, and well-informed will naturally trust the technician, which greatly facilitates the intervention.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">I would find it interesting to do role-playing games simulating "client/technician" situations during classes, in order to practice dealing with stressed users or explaining complicated concepts simply.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,138 +479,176 @@
             <!-- AC13 : Program -->
             <div class="ac-group" id="ac13">
                 <h2><i class="fas fa-code" style="color: #f39c12;"></i> Competence 3 : Program</h2>
-                
-                <button class="accordion">AC13.01 – Master the fundamentals of imperative programming (Python, C)</button>
+
+                <button class="accordion">AC13.01 – Use a computer system and its tools</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> AI Model Project (SAE 1.05) with OpenCV.</p>
-                        <div class="placeholder-img">
-                            <i class="fab fa-python"></i>
-                            <p>Space for source code snippets.</p>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/Guide%20d%E2%80%99administration%20Linux.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View Guide: Git Commands and Terminal Usage
+                            </a>
+                        </div>
+                        
+                        <div class="ac-images-container" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin: 1.5rem 0; align-items: stretch;">
+                            <div class="ac-image-wrap" style="flex: 1 1 400px; max-width: 500px; height: 250px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                <img src="assets/img/ac1301_github.png" alt="Popular GitHub Repositories" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;">
+                            </div>
+                            <div class="ac-image-wrap" style="flex: 1 1 400px; max-width: 500px; height: 250px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff; display: flex; align-items: center; justify-content: center;">
+                                <img src="assets/img/ac1301_vscode.png" alt="VS Code IDE Environment (SQL code in init.sql)" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;">
+                            </div>
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I familiarized myself with and daily use a complete development environment: the VS Code editor, the Git versioning tool with GitHub, the Linux terminal, as well as integrated browser developer tools (DevTools).</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">Mastering your workspace and tools is the very first essential step to being organized, efficient, and productive during development or scripting phases.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">Daily practice while developing my own portfolio trained me. I read official tool documentation and followed specific tutorials to get started with Git.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Handling Git conflicts when merging changes and conceptually understanding the branching model were rather complex concepts to grasp at first.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I now master the essential Git commands and feel completely comfortable working in a standardized, professional development environment.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">I would force myself to use Git from the very first line of code of a project, rather than trying to introduce it midway when development is already well underway.</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC13.02 – Write automation scripts for network-related tasks</button>
+                <button class="accordion">AC13.02 – Read, understand, execute, correct and modify a program</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Python scripts for address configurations.</p>
-                    </div>
-                </div>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/Livrable-sae12.ipynb" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-code"></i>
+                                View SAE 1.4 Deliverable: Data Processing Scripts
+                            </a>
+                        </div>
+                        
 
-                <button class="accordion">AC13.03 – Manipulate and process structured data (files, databases)</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Reading JSON and CSV files with Python.</p>
-                    </div>
-                </div>
-
-                <button class="accordion">AC13.04 – Build simple web interfaces (HTML, CSS, JavaScript)</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Creation of this portfolio (HTML, CSS, JS).</p>
-                    </div>
-                </div>
-
-                <button class="accordion">AC13.05 – Use APIs and libraries to interact with network equipment</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> AI Model (SAE 1.05) – Use of OpenCV and ML libraries.</p>
-                    </div>
-                </div>
-
-                <button class="accordion">AC13.06 – Test and debug programs in a methodical way</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Testing cycles during Python and C development.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AC14 : Secure -->
-            <div class="ac-group" id="ac14">
-                <h2><i class="fas fa-shield-alt" style="color: #1abc9c;"></i> Competence 4 : Secure</h2>
-                
-                <button class="accordion">AC14.01 – Recognise the main cyber threats (phishing, malware, network attacks)</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Online Risk Awareness (SAE 1.01) – ANSSI MOOC.</p>
-                        <div class="placeholder-img">
-                            <i class="fas fa-user-shield"></i>
-                            <p>Space for the SecNumacadémie achievement certificate.</p>
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I analyzed, read, and modified existing source code (notably the JavaScript of the SnapFolio template) to adapt it to my own needs, while identifying and fixing various display bugs.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">In the professional world, software is rarely created from scratch. The reality of the job very often involves taking over someone else's code; knowing how to read and modify it is therefore a key skill.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">For my Web Portfolio project, I pored over the template's source code, used browser DevTools to debug step by step, and conducted targeted research on MDN documentation and Stack Overflow.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Understanding the logic of JavaScript code (especially for the Canvas animation) that I hadn't written was tough. The concepts of closures and animation loop management (`requestAnimationFrame`) caused me problems.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I developed a real method for tackling unknown code: I first identify the main functions, I mentally trace the program's execution, and I isolate variables to find bugs.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">In the future, when discovering a new complex script, I will take the time to add my own comments above each code block as I read it to keep a clear record of my understanding.</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC14.02 – Apply IT hygiene rules (updates, strong passwords, backups)</button>
+                <button class="accordion">AC13.03 – Translate an algorithm into a language for a given
+                    environment</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> SAE 1.01 Project.</p>
-                    </div>
-                </div>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/S%C3%A9ance_TP6-SAE13.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View TP R1.07: Algorithms and Programming in C / Python
+                            </a>
+                        </div>
+                        
 
-                <button class="accordion">AC14.03 – Configure firewalls and network filtering policies</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Secure Administration (SAE 3.01 - Upcoming).</p>
-                    </div>
-                </div>
-
-                <button class="accordion">AC14.04 – Set up secure connections (VPN, TLS/SSL)</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> SSH connections to VMs and routers during practicals.</p>
-                    </div>
-                </div>
-
-                <button class="accordion">AC14.05 – Raise user awareness of cybersecurity best practices</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Drafting security guidelines for a fictional use case (SAE 1.01).</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AC15 : Monitor -->
-            <div class="ac-group" id="ac15">
-                <h2><i class="fas fa-chart-line" style="color: #9b59b6;"></i> Competence 5 : Monitor</h2>
-                
-                <button class="accordion">AC15.01 – Collect and analyse network performance indicators (latency, throughput, loss)</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Monitoring and Analysing Performance (SAE 2.03 - Upcoming).</p>
-                    </div>
-                </div>
-
-                <button class="accordion">AC15.02 – Use monitoring tools (Wireshark, SNMP, Nagios)</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Frame capturing via Wireshark during Network practicals.</p>
-                        <div class="placeholder-img">
-                            <i class="fas fa-chart-bar"></i>
-                            <p>Space for an annotated Wireshark capture.</p>
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I coded and implemented classic algorithms (like sorting and searching) using the syntax of two very different languages: Python (for the Python Essentials 1 certification) and the C language.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">An algorithm represents pure logic, while the language is just the tool to express it. Knowing how to transpose the same logic from one environment to another is the foundation of a good programming mindset.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">I followed S1 programming courses and Cisco Python Institute curriculum practical exercises. I used the Thonny IDE to experiment with Python and compiled my C programs to compare behaviors.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Going from Python's simplicity to C's rigor was a shock. Manual memory management in C (with pointers and dynamic allocation) was a particularly abstract and difficult concept to master.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I truly assimilated the fact that algorithmic logic takes precedence over syntax. Once the algorithm is clear in my head, implementing it in any language becomes much easier.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">I would get into the habit of drawing my algorithm's flowchart on a piece of paper before touching the keyboard. This separates purely logical thinking from code syntax constraints.</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC15.03 – Interpret system and network logs to detect anomalies</button>
+                <button class="accordion">AC13.04 – Know the architecture and technologies of a website</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Log analysis on Linux using /var/log.</p>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/Rapport%20administration%20windows10.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-pdf"></i>
+                                View TP R1.09: Relational Database Design
+                            </a>
+                        </div>
+                        <div class="ac-image-wrap" style="max-width: 750px; margin: 1.5rem auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee; background: #fff;">
+                            <img src="assets/img/ac1304_databases.png" alt="Database Management Interface (pgAdmin / phpMyAdmin)" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+                        </div>
+
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I designed and developed complete web applications. On one hand, a static portfolio (HTML5, CSS3, JS, Bootstrap) and on the other, a dynamic PHP web platform linked to a MySQL database (ESGIS Platform).</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">Web interfaces are the industry standard, including for administering network equipment (admin interfaces, monitoring dashboards). It is therefore very useful to understand how they are built.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">I relied on SAE 14 web development courses, MDN documentation, and tutorials. I developed server-side logic (backend) in PHP and the data structure to manage school grades.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">Making PHP communicate cleanly with MySQL (especially via prepared statements) and securing forms against common vulnerabilities (like SQL injections) were the most intense technical challenges.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I demystified the client-server model. I can now easily distinguish between the role of the frontend (interface) and the backend (logic and data), and I am aware of basic web security issues.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">Before jumping into PHP code, I would model my database structure (MCD/MLD) much more strictly to avoid having to restructure my tables in the middle of the project.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <button class="accordion">AC15.04 – Set up alerts and monitoring dashboards</button>
+                <button class="accordion">AC13.05 – Use frameworks and libraries</button>
                 <div class="panel">
                     <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Second year projects (Upcoming).</p>
-                    </div>
-                </div>
+                        <div class="document-link" style="margin: 1rem 0;">
+                            <a href="assets/Livrable-sae12.ipynb" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; font-size: 0.9rem;">
+                                <i class="fas fa-file-code"></i>
+                                View Project SAE 1.4: Integration of Bootstrap 5 Framework
+                            </a>
+                        </div>
+                        
 
-                <button class="accordion">AC15.05 – Propose corrective actions following a performance analysis</button>
-                <div class="panel">
-                    <div class="panel-content">
-                        <p><strong>Deployed in:</strong> Practical session feedback and project document conclusions.</p>
+                        <div class="ac-reflection"
+                            style="margin-top: 1.5rem; background: var(--gray-100); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-dark); font-size: 1.1rem;">Competence
+                                Analysis</h4>
+                                                                                                                                                                                                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong>What I did:</strong> <br><span
+                                        style="color: var(--gray-700);">I integrated several third-party tools into my projects: the Bootstrap 5 framework for responsive layout, the AOS library for scroll animations, and Bootstrap Icons/Font Awesome for iconography.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>Why I did it:</strong> <br><span
+                                        style="color: var(--gray-700);">In business, you don't reinvent the wheel for every project. Using frameworks significantly accelerates development while guaranteeing robust, maintainable, and visually professional code.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>How I did it (method, tools, resources):</strong> <br><span
+                                        style="color: var(--gray-700);">For my Portfolio creation (SAE 14), I delved into the official Bootstrap documentation. I analyzed community-provided examples to understand how to nest classes cleanly.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>My difficulties:</strong> <br><span
+                                        style="color: var(--gray-700);">The trickiest part was successfully overriding the default CSS styles imposed by Bootstrap to customize the design, without "breaking" the responsive behavior and the framework's native grid system.</span></li>
+                                <li style="margin-bottom: 0.8rem;"><strong>What I learned from it:</strong> <br><span
+                                        style="color: var(--gray-700);">I learned how to effectively navigate official technical documentation and, above all, I learned to distinguish what belongs to my own code logic from what the framework automatically manages in the background.</span></li>
+                                <li><strong>What I would do differently:</strong> <br><span
+                                        style="color: var(--gray-700);">Before importing a framework and starting to tinker, I would take the time to read its documentation as a whole to get an overview of all its capabilities and philosophy.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -293,9 +671,18 @@
 
     <!-- Accordion Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggle CPN intro block
+            const toggleTitle = document.getElementById("toggle-intro");
+            const cpnIntro = document.getElementById("cpn-intro");
+            if (toggleTitle && cpnIntro) {
+                toggleTitle.addEventListener("click", function() {
+                    cpnIntro.classList.toggle("visible");
+                });
+            }
+
             var acc = document.getElementsByClassName("accordion");
-            
+
             // Handle URL hash mapping
             const hash = window.location.hash;
             if (hash) {
@@ -309,7 +696,7 @@
                             top: targetPosition,
                             behavior: 'smooth'
                         });
-                        
+
                         const firstAcc = targetEl.querySelector('.accordion');
                         if (firstAcc && !firstAcc.classList.contains('active')) {
                             firstAcc.click();
@@ -319,20 +706,21 @@
             }
 
             for (var i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
+                acc[i].addEventListener("click", function () {
                     this.classList.toggle("active");
                     var panel = this.nextElementSibling;
-                    
+
                     if (panel.style.maxHeight) {
                         panel.style.maxHeight = null;
                         panel.classList.remove("open");
                     } else {
                         panel.classList.add("open");
                         panel.style.maxHeight = panel.scrollHeight + "px";
-                    } 
+                    }
                 });
             }
         });
     </script>
 </body>
+
 </html>
