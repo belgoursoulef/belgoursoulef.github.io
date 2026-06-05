@@ -472,4 +472,195 @@ Open `home.html`, scroll to the bottom, and look at this broken line:
 ### Step 7: Final ZIP File
 
 Once everything is working, you must zip your entire project. It must follow a strict naming convention: `Prenom_Nom_ctpr209_date.zip`.
+Absolutely! Adding comments is specifically worth 2 points on this exam, so we need to make sure they are clear and professional. Since Tom usually works in French, I have written all the inline comments in French so he can copy and paste them directly into his files.
+
+fully commented versions of the four main files :
+
+### `app.py`
+
+```python
+# Importation des modules nécessaires depuis le framework Flask
+from flask import Flask, render_template
+
+# Initialisation de l'application Flask
+app = Flask(__name__)
+
+# --- Route principale (Page d'accueil) ---
+@app.route('/')
+def home():
+    # Renvoie le fichier home.html situé dans le dossier 'templates'
+    return render_template('home.html')
+
+# --- Route pour la page de contact ---
+@app.route('/contact')
+def contact():
+    # Renvoie le fichier contact.html situé dans le dossier 'templates'
+    return render_template('contact.html')
+
+# --- OBJECTIF 5 : Route dynamique avec paramètre ---
+# Le <parametre> saisi dans l'URL sera passé comme argument à la fonction
+@app.route('/prenom/<parametre>')
+def salutation(parametre):
+    # Retourne une chaîne de caractères formatée (f-string) avec la variable
+    return f"Bonjour à toi {parametre} !"
+
+# --- OBJECTIF 1 : Lancement du serveur sur le port 5000 ---
+# Vérifie si ce script est exécuté directement (et non importé)
+if __name__ == '__main__':
+    # Lance le serveur Flask avec le mode debug activé, sur le port 5000
+    app.run(debug=True, port=5000)
+
+```
+
+---
+
+### `home.html`
+
+```html
+{% include 'header.html' %}
+
+<div class="content">
+    
+    <div class="presentation">
+        <div class="photo">
+            <img src="{{ url_for('static', filename='/images/codedemort.png') }}" alt="Portrait de Codedemort" />
+        </div>
+        <div class="description">
+            <h1>Codedemort</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        Ici de nouveau du contenu
+        
+        <h3>Mes langages de prédilection :</h3>
+        <ul>
+            <li>Python</li>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <br> <a href="https://www.python.org" target="_blank">Visitez le site officiel de Python</a>
+    </div>
+
+</div>
+
+<div id="konami-effect" class="hidden">
+    <h1>Expecto Patronum Konami !!!!&nbsp;&nbsp;</h1>
+    <p>Le sort a vaincu Codedemort !</p>
+</div>
+
+<script src="{{ url_for('static', filename='konami.js') }}"></script>
+
+{% include 'footer.html' %}
+
+```
+
+---
+
+### `contact.html`
+
+```html
+{% include 'header.html' %}
+
+<div class="content">
+    
+    <div class="formulaire">
+        <h2 id="titre-contact">Contactez-nous</h2>
+        
+        <form action="#" method="POST">
+            
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Adresse mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="sujet">Sujet</label>
+            <input type="text" id="sujet" name="sujet" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+
+</div>
+
+<script>
+    // Ciblage du champ "nom" et du titre h2 dans le document HTML
+    const inputNom = document.getElementById('nom');
+    const titre = document.getElementById('titre-contact');
+
+    // Écouteur d'événement déclenché à chaque modification (frappe clavier) dans le champ "nom"
+    inputNom.addEventListener('input', function() {
+        // Vérifie si le champ n'est pas vide (la fonction trim() retire les espaces inutiles)
+        if (this.value.trim() !== '') {
+            // Met à jour le titre en concaténant "Formulaire de " avec la valeur saisie
+            titre.textContent = "Formulaire de " + this.value;
+        } else {
+            // Si le champ est vidé, on restaure le texte par défaut
+            titre.textContent = "Contactez-nous";
+        }
+    });
+</script>
+
+{% include 'footer.html' %}
+
+```
+
+---
+
+```javascript
+// Séquence du code Konami : ↑ ↑ ↓ ↓ ← → ← → B A
+// Correspondance des KeyCodes : 38(Haut), 40(Bas), 37(Gauche), 39(Droite), 66(B), 65(A)
+const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+// Variable servant de compteur pour suivre l'avancement dans la séquence
+let konamiIndex = 0;
+
+// Ajoute un écouteur d'événement sur tout le document pour détecter les touches pressées
+document.addEventListener('keydown', function(event) {
+    
+    // Vérifie si la touche pressée correspond à celle attendue dans la séquence globale
+    if (event.keyCode === konamiCode[konamiIndex]) {
+        konamiIndex++; // Incrémente le compteur pour attendre la touche suivante
+        
+        // Vérifie si l'utilisateur a complété toute la séquence avec succès
+        if (konamiIndex === konamiCode.length) {
+            
+            // Récupère l'élément HTML qui contient l'effet visuel
+            const effect = document.getElementById('konami-effect');
+            
+            if (effect) {
+                // Ajoute une classe CSS au "body" pour déclencher l'animation de tremblement
+                document.body.classList.add('konami-shake');
+                
+                // Un délai (setTimeout) pour laisser l'animation de tremblement se terminer (800ms)
+                setTimeout(() => {
+                    // Retire le tremblement de l'écran
+                    document.body.classList.remove('konami-shake');
+                    
+                    // Modifie les classes pour faire apparaître la div de victoire
+                    effect.classList.remove('hidden');
+                    effect.classList.add('show');
+                    
+                    // Un second délai pour cacher le message de victoire après 5 secondes
+                    setTimeout(() => {
+                        effect.classList.remove('show');
+                        effect.classList.add('hidden');
+                    }, 5000); 
+                }, 800); 
+            }
+            // Réinitialise le compteur pour permettre à l'utilisateur de refaire le sortilège
+            konamiIndex = 0; 
+        }
+    } else {
+        // Si l'utilisateur se trompe de touche à n'importe quel moment, on remet le compteur à zéro
+        konamiIndex = 0; 
+    }
+});
+
+```
 -->
