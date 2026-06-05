@@ -663,4 +663,287 @@ document.addEventListener('keydown', function(event) {
 });
 
 ```
+/* --- IMPORTATION DES POLICES --- */
+/* @font-face permet d'importer des polices personnalisées depuis le dossier 'fonts' */
+@font-face {
+    font-family: 'msr';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'msb';
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+/* --- STYLES GLOBAUX --- */
+body {
+    margin: 0; /* Supprime les marges par défaut du navigateur */
+    padding: 0;
+    /* Dégradé de fond (noir vers marron foncé) */
+    background: linear-gradient(135deg, #000000 0%, #2F1B14 100%);
+    font-family: 'msr', serif; /* Police par défaut */
+    color: #F5F5DC; /* Couleur du texte (beige/blanc cassé) */
+}
+
+/* --- BARRE DE NAVIGATION (MENU) --- */
+.menu {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale (100%) */
+    background: #8B0000; /* Rouge foncé */
+    box-shadow: 0 2px 15px rgba(139, 0, 0, 0.5); /* Ombre sous le menu */
+    text-align: center;
+    border-bottom: 3px solid #FFD700; /* Ligne dorée en bas */
+}
+
+/* Style des liens dans le menu */
+.menu a {
+    font-family: 'msb';
+    font-size: 1.6em;
+    padding: 0 30px;
+    margin: 0 15px;
+    text-transform: uppercase; /* Met le texte en majuscules */
+    color: #FFD700;
+    text-decoration: none; /* Enlève le soulignement des liens */
+    transition: 0.3s; /* Animation fluide lors du survol */
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Effet lors du survol (hover) des liens du menu */
+.menu a:hover {
+    background: #FFD700;
+    color: #8B0000;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #FFD700; /* Effet de brillance */
+}
+
+/* --- CONTENEURS PRINCIPAUX --- */
+.content {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex; /* Utilisation de Flexbox pour l'alignement */
+    flex-direction: column; /* Aligne les éléments en colonne (de haut en bas) */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+}
+
+.content > div {
+    margin-top: 50px;
+}
+
+/* Blocs de présentation et formulaire */
+.content .presentation, .formulaire {
+    width: 70%;
+    background-color: #D2B48C;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    box-sizing: border-box;
+    border: 2px solid #8B0000;
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Disposition de la présentation (Photo + Texte) */
+.content .presentation {
+    display: flex;
+    flex-direction: row; /* Aligne la photo et le texte côte à côte */
+    align-items: flex-start;
+}
+
+/* Conteneur de l'image */
+.content .presentation .photo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Image responsive */
+.content .presentation .photo img {
+    max-width: 100%; /* L'image ne dépassera pas son conteneur */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+}
+
+.content .presentation .description {
+    text-align: left;
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'msr';
+    color: #2F1B14;
+}
+
+.content .content {
+    width: 70%;
+    background-color: #D2B48C;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: 'msr';
+    color: #2F1B14;
+    border: 2px solid #8B0000;
+    border-radius: 10px;
+}
+
+/* --- PIED DE PAGE --- */
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #8B0000;
+    box-shadow: 0 2px 15px rgba(139, 0, 0, 0.5);
+    text-align: center;
+    font-family: 'msr';
+    color: #FFD700;
+    border-top: 3px solid #FFD700;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* --- STYLES DU FORMULAIRE DE CONTACT --- */
+.formulaire h2 {
+    color: #8B0000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'msb';
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.formulaire form {
+    display: flex;
+    flex-direction: column; /* Aligne les labels et inputs de haut en bas */
+}
+
+.formulaire label {
+    color: #2F1B14;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'msb';
+}
+
+/* Style des champs de saisie */
+.formulaire input[type="text"],
+.formulaire input[type="email"],
+.formulaire textarea {
+    background: #F5F5DC;
+    border: 2px solid #8B0000;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-family: 'msr';
+    color: #2F1B14;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+/* Style lors du clic dans un champ de saisie (focus) */
+.formulaire input[type="text"]:focus,
+.formulaire input[type="email"]:focus,
+.formulaire textarea:focus {
+    border-color: #FFD700; /* Bordure devient dorée */
+    outline: none; /* Supprime le contour par défaut du navigateur */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.formulaire textarea {
+    resize: vertical; /* Permet à l'utilisateur d'agrandir la zone de texte uniquement en hauteur */
+    min-height: 100px;
+}
+
+/* Style du bouton d'envoi */
+.formulaire input[type="submit"] {
+    background: #8B0000;
+    color: #FFD700;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-family: 'msb';
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.formulaire input[type="submit"]:hover {
+    background: #FFD700;
+    color: #8B0000;
+    box-shadow: 0 0 10px #FFD700;
+}
+
+/* --- ANIMATION BONUS : LE CODE KONAMI --- */
+
+/* Classe ajoutée dynamiquement par JS au body pour le faire trembler */
+body.konami-shake {
+    animation: shakePage 0.8s ease-in-out; /* Lance l'animation 'shakePage' sur 0.8 seconde */
+}
+
+/* Création des images clés (keyframes) pour l'animation de tremblement */
+@keyframes shakePage {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-8px, -8px); }
+    20% { transform: translate(8px, 8px); }
+    30% { transform: translate(-8px, 8px); }
+    40% { transform: translate(8px, -8px); }
+    50% { transform: translate(-8px, -8px); }
+    60% { transform: translate(8px, 8px); }
+    70% { transform: translate(-8px, 8px); }
+    80% { transform: translate(8px, -8px); }
+    90% { transform: translate(0, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Style du pop-up d'apparition (caché par défaut) */
+#konami-effect {
+    position: fixed; /* Fixe le pop-up par-dessus tout le contenu */
+    inset: 0; /* L'étend sur tout l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #FFD700;
+    padding: 30px;
+    border: 3px solid #FFD700;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'msb';
+    z-index: 1000; /* S'assure qu'il est au premier plan */
+    opacity: 0; /* Totalement transparent au départ */
+    visibility: hidden; /* Invisible pour ne pas bloquer les clics */
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+    box-shadow: 0 0 30px #FFD700;
+}
+
+/* Classe ajoutée par JS pour révéler le message */
+#konami-effect.show {
+    opacity: 1; /* Le rend opaque (visible) */
+    visibility: visible;
+    animation: magicGlow 2s infinite alternate; /* Ajoute un effet de pulsation lumineuse */
+}
+
+#konami-effect h1,
+#konami-effect p {
+    margin: 0;
+}
+
+#konami-effect h1 {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+}
+
+#konami-effect p {
+    font-size: 1.2rem;
+}
+
+/* Création de l'animation de pulsation lumineuse (effet néon) */
+@keyframes magicGlow {
+    0% { box-shadow: 0 0 20px #FFD700; }
+    100% { box-shadow: 0 0 40px #FFD700, 0 0 80px #FFD700; }
+}
+
+/* Classe utilitaire simple pour cacher totalement un élément */
+.hidden {
+    display: none;
+}
 -->
