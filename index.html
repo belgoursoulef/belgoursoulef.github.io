@@ -308,3 +308,168 @@
         </footer>
 </body>
 </html>
+
+<!--
+
+### Step 0: Ubuntu Environment Setup
+
+Since you are working on Ubuntu, remember that using VS Code or any AI-integrated editor is strictly forbidden and will result in an immediate 0.
+
+1. Use `gedit` to edit your files.
+
+
+2. Ensure Flask is installed without using `sudo`: `pip install Flask`.
+
+
+3. Open your terminal and export your environment variables for Ubuntu:
+
+
+```bash
+export FLASK_APP=app.py
+export FLASK_ENV=development
+
+```
+
+
+4. You can start the server anytime with `python3 -m flask run`.
+
+
+
+---
+
+### Step 1: Objective 1 - Start the Server on Port 5000 (1 pt)
+
+The first goal is to code the startup script in `app.py` so the server runs on port 5000.
+
+Open `app.py` and add this right at the bottom:
+
+```python
+# --- OBJECTIVE 1 ---
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
+
+```
+
+---
+
+### Step 2: Objectives 2 & 3 - HTML List and External Link (2 pts)
+
+You need to add an HTML list with a minimum of 3 items and a clickable link that opens in a new tab. You can put this anywhere, but the `home.html` content area is the best spot.
+
+Open `home.html` and replace the inner content `div` with this:
+
+```html
+    <div class="content">
+        Ici de nouveau du contenu
+        
+        <h3>My Tech Stack:</h3>
+        <ul>
+            <li>Python</li>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <a href="https://www.python.org" target="_blank">Go to the official Python website</a>
+    </div>
+
+```
+
+---
+
+### Step 3: Objective 4 - The Contact Form (3 pts)
+
+You need to create a form on the contact page with specific fields: Full name, Email, Subject, a large Message text area, and a submit button. You also need to add HTML security (like requiring the email field).
+
+Open `contact.html` and replace the `.formulaire` div with this:
+
+```html
+    <div class="formulaire">
+        <h2 id="titre-contact">Contactez-nous</h2>
+        
+        <form action="#" method="POST">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Adresse mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="sujet">Sujet</label>
+            <input type="text" id="sujet" name="sujet" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+
+```
+
+---
+
+### Step 4: Objective 5 - Dynamic Python Route (3 pts)
+
+You need a new route `http://localhost:5000/prenom/<paramètre>` that dynamically displays "Bonjour à toi [votre_prénom] !" based on the URL.
+
+Open `app.py` again and add this new route above your `if __name__ == '__main__':` block:
+
+```python
+# --- OBJECTIVE 5 ---
+@app.route('/prenom/<parametre>')
+def salutation(parametre):
+    return f"Bonjour à toi {parametre} !"
+
+```
+
+---
+
+### Step 5: Objective 6 - Live JavaScript Title Update (2 pts)
+
+When typing in the "Nom complet" input, the title above the form must update in real-time to say "Formulaire de [Name]".
+
+Open `contact.html` and add this script at the very bottom, right before `{% include 'footer.html' %}`:
+
+```html
+<script>
+    const inputNom = document.getElementById('nom');
+    const titre = document.getElementById('titre-contact');
+
+    inputNom.addEventListener('input', function() {
+        if (this.value.trim() !== '') {
+            titre.textContent = "Formulaire de " + this.value;
+        } else {
+            titre.textContent = "Contactez-nous";
+        }
+    });
+</script>
+
+```
+
+---
+
+### Step 6: BONUS - Expecto Patronum Konami (2 pts)
+
+To defeat "Codedemort", the Konami code needs to work on the home page. The CSS and JS are already perfect, but there is a typo in how the JS is imported in `home.html`.
+
+Open `home.html`, scroll to the bottom, and look at this broken line:
+
+```html
+<link href="konami.js"></link>
+
+```
+
+**Delete it**, and replace it with the proper Flask script tag:
+
+```html
+<script src="{{ url_for('static', filename='konami.js') }}"></script>
+
+```
+
+*(Now, if you type ↑ ↑ ↓ ↓ ← → ← → B A on the home page, the spell will work!)*
+
+---
+
+### Step 7: Final ZIP File
+
+Once everything is working, you must zip your entire project. It must follow a strict naming convention: `Prenom_Nom_ctpr209_date.zip`.
+-->
